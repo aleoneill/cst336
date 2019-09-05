@@ -23,6 +23,11 @@ a.active {
     color:cornflowerblue;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 nav a:hover {
     border-bottom:2px orange solid;
     font-size: 2em;
