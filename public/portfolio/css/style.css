@@ -1,17 +1,6 @@
-nav a:active {
-    background-color: white;
-    color:black;
-}
-
-nav a:hover:not(.active) {
-    background-color: gray;
-    color: white;
-}
-
 body {
     background-color:black;
     color:gray;
-
 }
 
 header, nav, footer {
@@ -27,11 +16,11 @@ nav a {
     padding-bottom: 4px;
     font-size: 1.8em;
     text-decoration: none;
-    color: white;
+    /*color: white;*/
 }
 
-a:active {
-    color:#6495ed;
+a.active {
+    color:cornflowerblue;
 }
 
 nav a:hover {
