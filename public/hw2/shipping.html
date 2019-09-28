@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pokemart Shopping Cart</title>
+    <link href = "css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/pokemon" type="text/css"/>
+</head>
+<body onload="displayOrderTotal()">
+
+<div class="header"></div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+    <div class="main">
+        <h1>Checkout:</h1>
+        <div class="itemA">
+            <form>
+                <h1>Shipping Address:</h1>
+                Full Name: <input type="text" id="name" required>
+                Address: <input type="text" id="address" required>
+                City: <input type="text" id="city" required>
+                State: <input type="text" id="state" required>
+                Zip Code: <input type="text" id="zip" required>
+                Country: <select id="country">
+                            <option>United States</option>
+                        </select>
+                Phone Number: <input id="tel" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <br>
+                <h1>Payment Method</h1>
+                Card Number: <input type="tel" id="card" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" required>
+                Name on Card: <input type="text" required>
+                Expiration Date: <input type="date" id="expiration">
+            </form>
+            <h1>Review Items</h1>
+            <div class="polaroid">
+                <img src="img/pokeball.png" alt="Pokeball" style="width:100%">
+            </div>
+            <span class="productName"><a href="" style="font-family: PokemonFireRedRegular; color:blue">Pokeball</a></span><br>
+            <select id="quantityA" style="margin-left: 2%">
+                <option value="0">0</option>
+                <option value="1">Qty: 1</option>
+                <option value="2">Qty: 2</option>
+                <option value="3">Qty: 3</option>
+            </select><br>
+            <span class="price">
+                <h1>Price:</h1>
+                <h2 style="color:green">$2.00</h2>
+            </span>
+        </div><br><br><br><br><br><br><br>
+        <div class="itemB"></div>
+        <div class="polaroid">
+            <img src="img/potion.png" alt="Potion" style="width:100%">
+        </div>
+        <span class="productName"><a href="" style="font-family: PokemonFireRedRegular; font-size: x-large; color:blue">Potion</a></span><br>
+        <select id="quantityB" style="margin-left: 2%">
+            <option value="0">0</option>
+            <option value="1">Qty: 1</option>
+            <option value="2">Qty: 2</option>
+            <option value="3">Qty: 3</option>
+        </select><br>
+        <span class="price">
+                <h1>Price:</h1>
+                <h2 style="color: green">$3.00</h2>
+            </span><br><br><br><br>
+        <div class="cartDetails">
+            <button style="font-family: PokemonFireRedRegular; font-size: 1em" onclick="getSelectedValue()">Update Cart</button>
+            <h1 style="color: red"class="total"></h1>
+            <button class="button button3" style="background-color: yellow" onclick="orderPlaced()">Place Your Order</button>
+        </div>
+    </div>
+
+    <div class="side">
+        <button class="button button3">Place Your Order</button>
+        <h1>Order Summary: </h1>
+        <h2 id="items"></h2>
+        <h2 id="totalBeforeTax"></h2>
+        <h2 id="tax"></h2>
+        <h1 style="color: red" id="total"></h1>
+    </div>
+
+    <div class="footer" style="font-family: PokemonFireRedRegular">
+        <audio id="backgroundMusic" controls loop autoplay>
+            <source src="music/Pokemon%20BlueRed%20-%20Pokemon%20Center.mp3" type="audio/mpeg">
+        </audio>
+        <hr>CST 336:Internet Programming. 2019&copy; O'Neill<br>
+        <strong>Disclaimer:</strong>The information in this webpage is totally and completely true.<br>
+        Even if it is used for academic purposes.<br>
+        <img id="logo" src="img/csumb-logo.png" alt="CSUMB Logo">
+    </div>
+</div>
+<script src="js/functions.js"></script>
+</body>
+</html>
