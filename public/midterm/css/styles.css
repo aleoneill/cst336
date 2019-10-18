@@ -1,0 +1,25 @@
+body {
+    text-align: center;
+}
+
+#buttons {
+    display: inline-block;
+}
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    position:relative;
+    width:100%;
+}
+#rubricDiv {
+    text-align: center;
+}
+
+#cancel-dislike, #cancel-like {
+    visibility: hidden;
+}
+
+#question {
+    visibility: hidden;
+}
