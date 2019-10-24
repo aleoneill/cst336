@@ -8,20 +8,20 @@ app.get("/", function(req, res){
     res.render("index.html");
 });
 
-app.get("/cpp", function(req, res){
-    res.send("This will be the C++ page");
+app.get("/cpp.html", function(req, res){
+    res.render("cpp.html");
 });
 
-app.get("/python", function(req, res){
-    res.send("This will be the Python Page");
+app.get("/python.html", function(req, res){
+    res.render("python.html");
 })
 
-app.get("/swift", function(req, res){
-    res.send("This will be the Swift Page");
+app.get("/swift.html", function(req, res){
+    res.render("swift.html");
 })
 
 
 // server listener
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen("8081", "127.0.0.1", function(){
     console.log("Express Server is running...");
 });
