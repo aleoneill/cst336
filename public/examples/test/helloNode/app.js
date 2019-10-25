@@ -6,3 +6,6 @@ let Student = require("./includes/newable");
 let someone = new Student("Lexi", "Super Junior", 3.1);
 someone.greeting();
 console.log(someone.athlete());
+
+const joke = require("knock-knock-jokes");
+console.log(joke());
