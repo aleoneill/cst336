@@ -16,21 +16,44 @@ app.get("/", function(req, res){
 
 } );
 
-app.post("/", function(req, res){
+app.post("/check_answers", function(req, res) {
 
-    res.json({
-        answers: [
-            {
-                question:1,
-                answer:true,
-            }
+    let answerKey = {
+        question1: "sacramento",
+        question2: "mo",
+        question3: [
+            "Jefferson",
+            "Roosevelt"
         ],
-        original: req.body
-    })
+        question4: "Rhode Island",
+        question5: "seal2",
+        question6: "dt",
+        question7: "florida",
+        question8: [
+            "Democrat",
+            "Republican",
+            "Green"
+        ]
+    }
 
-} );
 
+    let bodyObject = JSON.parse(Object.keys(req.body)[0]);
+    let { q1guess, q2guess, q3guess, q4guess, q5guess, q6guess, q7guess, q8guess } = bodyObject;
 
+    let feedback = {
+        q1: q1guess == answerKey.question1,
+        q2: q2guess == answerKey.question2,
+        q3: q3guess[0] == answerKey.question3[0] && q3guess[1] == answerKey.question3[1],
+        q4: q4guess == answerKey.question4,
+        q5: q5guess == answerKey.question5,
+        q6: q6guess == answerKey.question6,
+        q7: q7guess == answerKey.question7,
+        q8: q8guess[0] == answerKey.question8[0] && q8guess[1] == answerKey.question8[1] && q8guess[2] == answerKey.question8[2]
+    }
+
+    res.json(feedback);
+
+});
 
 // running server
 app.listen(process.env.PORT || 3000, process.env.IP, function(){
