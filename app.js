@@ -56,7 +56,7 @@ app.post("/check_answers", function(req, res) {
 });
 
 // running server
-app.listen(process.env.PORT || 3000, process.env.IP, function(){
+app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Express server is running...");
 });
 
