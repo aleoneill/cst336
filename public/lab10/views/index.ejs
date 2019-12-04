@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab 10</title>
+    <link rel="stylesheet" media="screen" href="https://fonts.googleapis.com/css?family=Proxima+Nova" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date of Birth</th>
+            <th>Date of Death</th>
+            <th><button>New Author</button></th>
+        </tr>
+        <% authors.forEach(function(author) { %>
+            <tr>
+                <td><%= author.id %></td>
+                <td><%= author.first_name %></td>
+                <td><%= author.last_name %></td>
+                <td><%= author.dob %></td>
+                <td><%= author.dod %></td>
+            </tr>
+        <% }); %>
+
+    </table>
+
+
+</body>
